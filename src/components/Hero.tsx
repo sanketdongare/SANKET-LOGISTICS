@@ -136,8 +136,8 @@ export default function Hero() {
                   <div className={styles.centerTextContainer}>
                     <svg
                       className={styles.centerIcon}
-                      width="38"
-                      height="38"
+                      width="30"
+                      height="30"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="var(--accent-cyan)"
