@@ -17,35 +17,36 @@ export default function Hero() {
         <div className={styles.glowBall2}></div>
       </div>
 
-      <div className={`${styles.grid} container`}>
-        <div className={`${styles.content} animate-fade-in`}>
+      <div className="container">
+        <div className={`${styles.contentCentered} animate-fade-in`}>
           <div className={styles.badge}>
             <span className={styles.badgeDot}></span>
-            Next-Gen Logistics Network
+            Dedicated Logistics Solutions
           </div>
           <h1 className={styles.title}>
-            Smart Transport Solutions for <span className="text-gradient-cyan">Global Scale</span>
+            Reliable Transport &amp; <span className="text-gradient-cyan">Supply Chain Partners</span>
           </h1>
           <p className={styles.description}>
-            Sanket Logistics delivers premium, reliable, and secure supply chain and freight services.
-            Powered by advanced tracking, optimized routing, and a modern fleet, we connect your business to the world.
+            Based in Nanekarwadi, Chakan, Pune, Sanket Logistics delivers premium, reliable, and secure 
+            freight solutions. We optimize your business transit requirements with rock-solid dependability.
           </p>
 
           <div className={styles.ctas}>
             <button
               className="btn btn-primary"
-              onClick={() => handleScrollTo("tracking")}
+              onClick={() => handleScrollTo("booking")}
             >
-              Track Cargo
+              Book Shipment
               <svg
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ marginLeft: "0.5rem" }}
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -71,67 +72,6 @@ export default function Hero() {
             <div className={styles.statItem}>
               <span className={styles.statVal}>650+</span>
               <span className={styles.statLabel}>Active Fleet</span>
-            </div>
-          </div>
-        </div>
-
-        <div className={`${styles.visual} animate-fade-in`}>
-          <div className={`${styles.consoleCard} glass`}>
-            <div className={styles.consoleHeader}>
-              <div className={styles.consoleDots}>
-                <span className={`${styles.dot} ${styles.dotRed}`}></span>
-                <span className={`${styles.dot} ${styles.dotYellow}`}></span>
-                <span className={`${styles.dot} ${styles.dotGreen}`}></span>
-              </div>
-              <span className={styles.consoleTitle}>Live Shipments Map</span>
-            </div>
-
-            <div className={styles.consoleBody}>
-              <div className={styles.routeLine}>
-                <div className={`${styles.routeNode} ${styles.nodeDone}`}>
-                  <span className={styles.nodeMarker}></span>
-                  <div className={styles.nodeLabel}>Origin: Shanghai Port</div>
-                  <div className={styles.nodeDesc}>Dispatched & Passed Customs • Jul 22</div>
-                </div>
-
-                <div className={`${styles.routeNode} ${styles.nodeDone}`}>
-                  <span className={styles.nodeMarker}></span>
-                  <div className={styles.nodeLabel}>Transit: Indian Ocean</div>
-                  <div className={styles.nodeDesc}>Cargo Vessel SK-Ocean 4 • Jul 23</div>
-                </div>
-
-                <div className={`${styles.routeNode} ${styles.nodeActive}`}>
-                  <span className={styles.nodeMarker}></span>
-                  <div className={styles.nodeLabel}>Destination: Nhava Sheva (Mumbai)</div>
-                  <div className={styles.nodeDesc}>Arrival scheduled • Jul 25, 08:30 AM</div>
-                </div>
-
-                <div className={styles.routeNode}>
-                  <span className={styles.nodeMarker}></span>
-                  <div className={styles.nodeLabel}>Final Delivery: Warehouse Delhi</div>
-                  <div className={styles.nodeDesc}>Local Courier Dispatch • Scheduled</div>
-                </div>
-              </div>
-
-              <div className={styles.vehicleStatus}>
-                <svg
-                  className={styles.vehicleIcon}
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                >
-                  <path d="M2 17h2a3 3 0 0 0 6 0h4a3 3 0 0 0 6 0h2v-4l-3-4H9L6 13H2z" />
-                  <circle cx="7" cy="17" r="2" />
-                  <circle cx="17" cy="17" r="2" />
-                </svg>
-                <div className={styles.vehicleInfo}>
-                  <span className={styles.vehicleName}>Truck #SK-4820 (In-Route)</span>
-                  <span className={styles.vehicleRoute}>Mumbai Hub → Delhi NCR</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -1,9 +1,10 @@
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   position: relative;
   padding-top: 8rem;
+  padding-bottom: 6rem;
   overflow: hidden;
 }
 
@@ -19,35 +20,32 @@
 
 .glowBall1 {
   position: absolute;
-  top: 20%;
-  left: 10%;
+  top: 15%;
+  left: 15%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(11, 27, 61, 0.04) 0%, transparent 70%);
   filter: blur(50px);
 }
 
 .glowBall2 {
   position: absolute;
   bottom: 10%;
-  right: 10%;
+  right: 15%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.03) 0%, transparent 70%);
   filter: blur(60px);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.content {
+.contentCentered {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  gap: 1.75rem;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .badge {
@@ -55,15 +53,14 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(2, 132, 199, 0.1);
-  border: 1px solid rgba(2, 132, 199, 0.2);
+  background: rgba(255, 107, 0, 0.08);
+  border: 1px solid rgba(255, 107, 0, 0.2);
   color: var(--accent-cyan);
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  width: fit-content;
 }
 
 .badgeDot {
@@ -76,7 +73,7 @@
 
 .title {
   font-family: var(--font-heading);
-  font-size: 3.75rem;
+  font-size: 3.85rem;
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1px;
@@ -85,23 +82,26 @@
 .description {
   font-size: 1.15rem;
   color: var(--text-med);
-  max-width: 580px;
-  margin-bottom: 1rem;
+  max-width: 680px;
+  margin-bottom: 0.5rem;
 }
 
 .ctas {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
   border-top: 1px solid var(--border-input);
+  width: 100%;
+  max-width: 600px;
 }
 
 .statItem {
@@ -112,187 +112,33 @@
 
 .statVal {
   font-family: var(--font-heading);
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--text-high);
-  background: linear-gradient(135deg, #fff 0%, var(--accent-cyan) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .statLabel {
   font-size: 0.85rem;
-  color: var(--text-med);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-}
-
-/* Right side Graphic / Console Card */
-.visual {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.consoleCard {
-  width: 100%;
-  max-width: 420px;
-  padding: 2rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-input);
-  box-shadow: var(--shadow-glass);
-  position: relative;
-  z-index: 2;
-}
-
-.consoleHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-input);
-  padding-bottom: 0.75rem;
-}
-
-.consoleDots {
-  display: flex;
-  gap: 6px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.dotRed { background: #ef4444; }
-.dotYellow { background: #eab308; }
-.dotGreen { background: #22c55e; }
-
-.consoleTitle {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 600;
   color: var(--text-low);
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.consoleBody {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.routeLine {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-left: 2rem;
-}
-
-.routeLine::before {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 10px;
-  bottom: 10px;
-  width: 2px;
-  background: dashed rgba(2, 132, 199, 0.3);
-}
-
-.routeNode {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.routeNode:last-child {
-  margin-bottom: 0;
-}
-
-.nodeMarker {
-  position: absolute;
-  left: -2rem;
-  top: 4px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--bg-dark);
-  border: 3px solid var(--text-low);
-}
-
-.nodeActive .nodeMarker {
-  border-color: var(--accent-cyan);
-  background: var(--accent-cyan);
-  box-shadow: 0 0 10px var(--accent-cyan);
-}
-
-.nodeDone .nodeMarker {
-  border-color: var(--accent-green);
-  background: var(--accent-green);
-}
-
-.nodeLabel {
   font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--text-high);
 }
 
-.nodeDesc {
-  font-size: 0.8rem;
-  color: var(--text-med);
-}
-
-.vehicleStatus {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: var(--bg-overlay);
-  padding: 1rem;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-input);
-}
-
-.vehicleIcon {
-  color: var(--accent-cyan);
-  animation: float 3s ease-in-out infinite;
-}
-
-.vehicleInfo {
-  display: flex;
-  flex-direction: column;
-}
-
-.vehicleName {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-high);
-}
-
-.vehicleRoute {
-  font-size: 0.75rem;
-  color: var(--text-med);
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+  }
 }
 
 /* Responsiveness */
-@media (max-width: 992px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-
-  .badge, .ctas, .stats {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+@media (max-width: 768px) {
   .hero {
     min-height: auto;
     padding: 8rem 0 4rem 0;
@@ -301,8 +147,10 @@
   .title {
     font-size: 2.75rem;
   }
-
-  .visual {
-    order: -1;
+  
+  .stats {
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }
