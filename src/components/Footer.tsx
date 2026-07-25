@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -28,25 +29,14 @@ export default function Footer() {
       <div className={`${styles.grid} container`}>
         <div className={styles.column}>
           <div className={styles.logo} onClick={() => scrollToSection("home")} style={{ cursor: "pointer" }}>
-            <svg
-              className={styles.logoIcon}
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-            >
-              <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h9" />
-              <path d="M20 14h2" />
-              <path d="M14 10h10" />
-              <path d="M14 14h4" />
-              <circle cx="7.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
-            </svg>
-            <span className={styles.logoText}>
-              SANKET <span className={styles.logoAccent}>LOGISTICS</span>
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Sanket Logistics Logo"
+              width={70}
+              height={28}
+              style={{ width: "auto", height: "auto" }}
+              className={styles.logoImg}
+            />
           </div>
           <p className={styles.desc}>
             Providing global supply chain, warehousing, and freight forwarding solutions.

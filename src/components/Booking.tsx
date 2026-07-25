@@ -49,14 +49,15 @@ export default function Booking() {
         cargoType: string;
         weight: number;
         distance: number;
+        specialNotes?: string;
       }>;
-      const { mode, cargoType, weight, distance } = customEvent.detail;
+      const { mode, cargoType, weight, distance, specialNotes } = customEvent.detail;
       setFormValues((prev) => ({
         ...prev,
         mode,
         cargoType,
         weight: weight.toString(),
-        notes: `Prefilled from calculator. Distance: ${distance} km.`,
+        notes: specialNotes || `Prefilled from calculator. Distance: ${distance} km.`,
       }));
     };
 
@@ -190,7 +191,7 @@ I would like to request a shipment booking.
                   type="text"
                   name="name"
                   className={styles.input}
-                  placeholder="John Doe"
+                  placeholder="sanket"
                   value={formValues.name}
                   onChange={handleInputChange}
                 />
@@ -203,7 +204,7 @@ I would like to request a shipment booking.
                   type="email"
                   name="email"
                   className={styles.input}
-                  placeholder="john@example.com"
+                  placeholder="sanket@gmail.com"
                   value={formValues.email}
                   onChange={handleInputChange}
                 />
@@ -216,7 +217,7 @@ I would like to request a shipment booking.
                   type="text"
                   name="phone"
                   className={styles.input}
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 7083701098"
                   value={formValues.phone}
                   onChange={handleInputChange}
                 />
@@ -241,7 +242,7 @@ I would like to request a shipment booking.
                   type="text"
                   name="origin"
                   className={styles.input}
-                  placeholder="Mumbai"
+                  placeholder="PUNE"
                   value={formValues.origin}
                   onChange={handleInputChange}
                 />
@@ -254,7 +255,7 @@ I would like to request a shipment booking.
                   type="text"
                   name="destination"
                   className={styles.input}
-                  placeholder="Bangalore"
+                  placeholder="Mumbai"
                   value={formValues.destination}
                   onChange={handleInputChange}
                 />
@@ -275,11 +276,12 @@ I would like to request a shipment booking.
                   <option value="air">Global Air Freight</option>
                   <option value="ocean">Ocean Cargo Shipping</option>
                   <option value="express">Express Courier B2B</option>
+                  <option value="monthly">Dedicated Monthly Fleet</option>
                 </select>
               </div>
 
               <div className={styles.formGroup}>
-                <label className={styles.label}>Cargo Type</label>
+                <label className={styles.label}>Cargo Type / Vehicle</label>
                 <select
                   name="cargoType"
                   className={styles.select}
@@ -290,6 +292,9 @@ I would like to request a shipment booking.
                   <option value="perishable">Perishables (Cold Chain)</option>
                   <option value="hazardous">Hazardous / Dangerous Goods</option>
                   <option value="highvalue">High-Value / Insured Goods</option>
+                  {formValues.mode === "monthly" && (
+                    <option value={formValues.cargoType}>{formValues.cargoType}</option>
+                  )}
                 </select>
               </div>
 

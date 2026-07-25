@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import styles from "./Services.module.css";
 
 const SERVICES_DATA = [
@@ -7,6 +8,7 @@ const SERVICES_DATA = [
     title: "Overland Road Freight",
     description: "Flexible, secure, and fast door-to-door domestic cargo distribution with our advanced fleet of container trucks.",
     features: ["GPS Live Tracking", "FTL & LTL Options", "Express Delivery Services"],
+    image: "/images/road_freight.jpg",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="1" y="3" width="15" height="13" rx="2" ry="2" />
@@ -20,6 +22,7 @@ const SERVICES_DATA = [
     title: "Global Air Freight",
     description: "Time-critical international shipping routed through the world's major airport hubs. Safe and incredibly fast.",
     features: ["Customs Clearance Assist", "Temperature Control", "Priority Airport Handling"],
+    image: "/images/air_freight.jpg",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
@@ -32,6 +35,7 @@ const SERVICES_DATA = [
     title: "Ocean Cargo Shipping",
     description: "Efficient international container logistics. Perfect for transporting heavy, oversized, or high-volume items.",
     features: ["FCL & LCL Shipments", "Port-to-Port Handling", "Project Cargo Management"],
+    image: "/images/ocean_freight.jpg",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M2 22h20" />
@@ -45,6 +49,7 @@ const SERVICES_DATA = [
     title: "Smart Warehousing",
     description: "Secure, temperature-regulated, and automated inventory storage with complete warehouse management integration.",
     features: ["WMS Real-time Inventory", "Cross-Docking Services", "Picking & Packing Fulfilment"],
+    image: "/images/warehouse.jpg",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z" />
@@ -56,6 +61,7 @@ const SERVICES_DATA = [
     title: "Express Courier B2B",
     description: "Next-day fast express service tailored for critical documentations, packages, and components distribution.",
     features: ["Proof of Delivery (POD)", "Same-Day City Delivery", "Direct Courier Access"],
+    image: "/images/delivery_van.jpg",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <circle cx="12" cy="12" r="10" />
@@ -67,6 +73,7 @@ const SERVICES_DATA = [
     title: "Supply Chain Consulting",
     description: "Strategic planning to optimize distribution lanes, reduce freight expenditures, and build resilient networks.",
     features: ["Route Optimization Studies", "3PL & 4PL Structuring", "Carbon Emission Reductions"],
+    image: "/images/flatbed_truck.jpg",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <line x1="18" y1="20" x2="18" y2="10" />
@@ -94,6 +101,15 @@ export default function Services() {
           {SERVICES_DATA.map((service, index) => (
             <div key={index} className={`${styles.card} glass`}>
               <div className={styles.cardGlow}></div>
+              <div className={styles.cardImageWrapper}>
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  className={styles.cardImage}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <div className={styles.iconWrapper}>{service.icon}</div>
               <h3 className={styles.cardTitle}>{service.title}</h3>
               <p className={styles.cardDesc}>{service.description}</p>

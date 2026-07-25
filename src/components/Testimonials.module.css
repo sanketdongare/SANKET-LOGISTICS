@@ -47,7 +47,7 @@
 .card {
   padding: 3.5rem;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-input);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -129,8 +129,8 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-input);
+  border: 1px solid var(--border-input);
   color: var(--text-high);
   display: flex;
   align-items: center;
@@ -140,7 +140,7 @@
 }
 
 .controlBtn:hover {
-  background: rgba(2, 132, 199, 0.1);
+  background: var(--primary-glow);
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
 }
@@ -154,7 +154,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--timeline-line);
   cursor: pointer;
   transition: var(--transition-smooth);
 }

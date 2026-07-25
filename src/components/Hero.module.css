@@ -101,7 +101,7 @@
   gap: 2rem;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--border-input);
 }
 
 .statItem {
@@ -140,8 +140,8 @@
   max-width: 420px;
   padding: 2rem;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-input);
+  box-shadow: var(--shadow-glass);
   position: relative;
   z-index: 2;
 }
@@ -151,7 +151,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-input);
   padding-bottom: 0.75rem;
 }
 
@@ -248,10 +248,10 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-overlay);
   padding: 1rem;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-input);
 }
 
 .vehicleIcon {

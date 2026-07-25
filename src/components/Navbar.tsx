@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -49,27 +50,15 @@ export default function Navbar() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={`${styles.navContainer} container`}>
         <div className={styles.logo} onClick={() => handleLinkClick("home")}>
-          <svg
-            className={styles.logoIcon}
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h9" />
-            <path d="M20 14h2" />
-            <path d="M14 10h10" />
-            <path d="M14 14h4" />
-            <circle cx="7.5" cy="18.5" r="2.5" />
-            <circle cx="18.5" cy="18.5" r="2.5" />
-          </svg>
-          <span className={styles.logoText}>
-            SANKET <span className={styles.logoAccent}>LOGISTICS</span>
-          </span>
+          <Image
+            src="/images/logo.png"
+            alt="Sanket Logistics Logo"
+            width={65}
+            height={26}
+            style={{ width: "auto", height: "auto" }}
+            className={styles.logoImg}
+            priority
+          />
         </div>
 
         <nav>

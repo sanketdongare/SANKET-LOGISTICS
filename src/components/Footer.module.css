@@ -32,25 +32,15 @@
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: 1px;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
-.logoIcon {
-  color: var(--accent-cyan);
-}
-
-.logoText {
-  color: var(--text-high);
-}
-
-.logoAccent {
-  color: var(--accent-cyan);
+.logoImg {
+  display: block;
+  object-fit: contain;
+  height: auto;
+  max-width: 100%;
 }
 
 .desc {
@@ -121,8 +111,8 @@
 .input {
   flex-grow: 1;
   padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-input);
+  border: 1px solid var(--border-input);
   border-radius: var(--radius-sm);
   color: var(--text-high);
   font-size: 0.9rem;
@@ -139,7 +129,7 @@
 }
 
 .bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--border-input);
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
@@ -169,8 +159,8 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--bg-overlay);
+  border: 1px solid var(--border-input);
   display: flex;
   align-items: center;
   justify-content: center;
