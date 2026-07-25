@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -14,14 +13,6 @@ export default function Hero() {
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.heroBackground}>
-        <Image
-          src="/images/hero_bg.jpg"
-          alt="Logistics Network Background"
-          fill
-          priority
-          className={styles.bgImage}
-        />
-        <div className={styles.bgOverlay}></div>
         <div className={styles.glowBall1}></div>
         <div className={styles.glowBall2}></div>
       </div>
