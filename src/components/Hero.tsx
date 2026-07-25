@@ -137,10 +137,10 @@ export default function Hero() {
                   <Image
                     src="/images/logo_round.jpg"
                     alt="Sanket Logistics Round Logo"
-                    width={320}
-                    height={320}
+                    width={290}
+                    height={290}
                     priority
-                    style={{ borderRadius: "50%", objectFit: "cover", transform: "scale(1.22)", display: "block" }}
+                    style={{ borderRadius: "50%", objectFit: "cover", transform: "scale(1.11)", display: "block" }}
                   />
                 </div>
               </div>
