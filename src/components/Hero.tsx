@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -134,14 +133,25 @@ export default function Hero() {
             >
               <div className={styles.logoRingOuter}>
                 <div className={styles.logoRingInner}>
-                  <Image
-                    src="/images/logo_round.jpg"
-                    alt="Sanket Logistics Round Logo"
-                    width={290}
-                    height={290}
-                    priority
-                    style={{ borderRadius: "50%", objectFit: "cover", transform: "scale(1.11)", display: "block" }}
-                  />
+                  <div className={styles.centerTextContainer}>
+                    <svg
+                      className={styles.centerIcon}
+                      width="38"
+                      height="38"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="var(--accent-cyan)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M2 17h2a3 3 0 0 0 6 0h4a3 3 0 0 0 6 0h2v-4l-3-4H9L6 13H2z" />
+                      <circle cx="7" cy="17" r="2" />
+                      <circle cx="17" cy="17" r="2" />
+                    </svg>
+                    <div className={styles.centerTextPrimary}>SANKET</div>
+                    <div className={styles.centerTextSecondary}>LOGISTICS</div>
+                  </div>
                 </div>
               </div>
             </div>
